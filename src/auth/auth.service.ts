@@ -34,4 +34,8 @@ export class AuthService {
     : Promise<User> {
         return await this.UserService.validateSignupInput(signupInput);
     }
+
+    async getAllProfiles() : Promise<User[]> {
+        return await this.UserService.getAllProfiles();
+    }
 }

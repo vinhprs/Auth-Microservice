@@ -33,4 +33,8 @@ export class UsersService {
         newUser.password = await bcrypt.hash(password, 8);
         return await this.UserRepository.save(newUser);
     }
+
+    async getAllProfiles() : Promise<User[]> {
+        return await this.UserRepository.find();
+    }
 }
